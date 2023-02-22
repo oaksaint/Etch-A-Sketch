@@ -28,12 +28,21 @@ cellBlock.forEach((item) => {
   });
 });
 
-const clearButton = document.querySelector('.clearbutton');
-
-clearButton.onclick = function () {
+const clear = function () {
   for (let i = 0; i < cellBlock.length; i++) {
     cellBlock[i].style.backgroundColor = 'white';
   }
 };
 
-const selectSize = document.querySelector('.selectsize');
+const clearButton = document.querySelector('.clear-button');
+
+clearButton.onclick = function () {
+  clear();
+};
+
+const rangeSlider = document.getElementById('range-slider');
+const sliderValue = document.getElementById('slider-value');
+
+rangeSlider.addEventListener('input', () => {
+  sliderValue.innerText = rangeSlider.value;
+});

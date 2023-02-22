@@ -6,18 +6,27 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
-  margin-right: 50px;
-  height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 200px;
+  height: 30px;
+  display: block;
+  margin: 10px 0 10px 0;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#range-slider {
+  width: 500px;
+  margin: 10px 0 10px 0;
+}
+
+#slider-value {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.slider-label {
+  display: block;
 }
